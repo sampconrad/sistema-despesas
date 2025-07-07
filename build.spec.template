@@ -1,0 +1,83 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+block_cipher = None
+
+# Coleta os arquivos do frontend
+client_files = [
+    ('sistema-despesas-client/index.html', '.'),
+    ('sistema-despesas-client/styles.css', '.'),
+    ('sistema-despesas-client/scripts.js', '.'),
+    ('sistema-despesas-client/img/money.png', 'img'),
+]
+
+# Coleta os arquivos da API
+api_files = [
+    ('sistema-despesas-api/app.py', 'sistema-despesas-api'),
+    ('sistema-despesas-api/model', 'sistema-despesas-api/model'),
+    ('sistema-despesas-api/schemas', 'sistema-despesas-api/schemas'),
+    ('sistema-despesas-api/logger.py', 'sistema-despesas-api'),
+    ('sistema-despesas-api/requirements.txt', 'sistema-despesas-api'),
+]
+
+# Combina todos os arquivos
+all_files = client_files + api_files
+
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=all_files,
+    hiddenimports=[
+        'flask',
+        'flask_cors',
+        'flask_openapi3',
+        'flask_sqlalchemy',
+        'sqlalchemy',
+        'sqlalchemy_utils',
+        'pydantic',
+        'werkzeug',
+        'jinja2',
+        'markupsafe',
+        'itsdangerous',
+        'click',
+        'blinker',
+        'typing_extensions',
+        'sistema-despesas-api.model',
+        'sistema-despesas-api.schemas',
+        'sistema-despesas-api.logger',
+        'sistema-despesas-api.app'
+    ],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[],
+    win_no_prefer_redirects=False,
+    win_private_assemblies=False,
+    cipher=block_cipher,
+    noarchive=False,
+)
+
+pyz = PYZ(a.pure, a.zipped_data, cipher=block_cipher)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    [],
+    name='SistemaDespesas',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=True,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=None
+) 

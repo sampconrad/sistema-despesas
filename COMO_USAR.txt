@@ -1,0 +1,42 @@
+🚀 SISTEMA DE DESPESAS - EXECUTÁVEL STANDALONE
+===============================================
+
+✅ BUILD CONCLUÍDO COM SUCESSO!
+
+📁 O executável foi criado: SistemaDespesas.exe
+
+🎯 COMO USAR:
+1. Dê duplo clique em "SistemaDespesas.exe"
+2. Aguarde alguns segundos (o servidor está inicializando)
+3. O navegador abrirá automaticamente
+4. Se não abrir, acesse: http://localhost:5000
+
+🌐 ACESSO:
+- URL: http://localhost:5000
+- Porta: 5000
+- Banco: SQLite local (automático)
+
+⚙️ FUNCIONALIDADES:
+- ✅ Adicionar despesas
+- ✅ Listar despesas
+- ✅ Editar despesas
+- ✅ Excluir despesas
+- ✅ Controle de parcelas
+- ✅ Status de pagamento
+
+🛑 PARA ENCERRAR:
+- Pressione Ctrl+C no console
+- Ou feche a janela do console
+
+📦 DISTRIBUIÇÃO:
+- Compacte toda esta pasta
+- Envie para qualquer pessoa
+- Não precisa instalar Python
+
+🔧 SOLUÇÃO DE PROBLEMAS:
+- Se a porta 5000 estiver em uso, feche outros programas
+- Se o antivírus bloquear, permita o acesso
+- Execute como administrador se necessário
+
+✅ TESTADO E FUNCIONANDO!
+🎉 Sistema pronto para uso! 

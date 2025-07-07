@@ -1,0 +1,240 @@
+# ========================================
+# Sistema de Despesas - .gitignore Centralizado
+# ========================================
+
+# ========================================
+# PYTHON (API)
+# ========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# ========================================
+# DATABASE
+# ========================================
+
+# SQLite files
+*.db
+*.sqlite
+*.sqlite3
+database/db.sqlite3
+
+# ========================================
+# LOGS
+# ========================================
+
+# Log files
+*.log
+log/
+logs/
+
+# ========================================
+# CREDENCIAIS E CONFIGURAÇÕES
+# ========================================
+
+# Credenciais de acesso
+credentials.txt
+secrets.json
+config.ini
+.env.local
+.env.development
+.env.production
+config.local.py
+settings.local.py
+
+# ========================================
+# SISTEMA OPERACIONAL
+# ========================================
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================================
+# IDEs E EDITORES
+# ========================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ========================================
+# ARQUIVOS TEMPORÁRIOS
+# ========================================
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# ========================================
+# BUILD E DISTRIBUIÇÃO
+# ========================================
+
+# Pasta de distribuição (executável)
+dist/
+
+# Arquivos de build do PyInstaller
+build/
+*.spec
+
+# ========================================
+# NODE.JS (se houver dependências frontend)
+# ========================================
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# ========================================
+# OUTROS
+# ========================================
+
+# Sqlalchemy stuff:
+*.swp
+
+# Arquivos de teste
+test_*
+*_test.py
+tests/
+
+# Arquivos de documentação gerados
+DOCUMENTACAO.html 
