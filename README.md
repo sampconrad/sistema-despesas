@@ -6,10 +6,6 @@ O sistema foi desenvolvido com o objetivo de facilitar o controle financeiro pes
 
 ## 🎨 Frontend
 
-Interface web desenvolvida em HTML, CSS e JavaScript para gerenciamento de despesas mensais. Esta aplicação permite cadastrar, visualizar, editar e excluir despesas através de uma interface moderna, responsiva e intuitiva.
-
-O frontend se comunica com a API backend para realizar todas as operações CRUD, oferecendo uma experiência de usuário fluida com validações em tempo real, formatação automática dos campos e feedback visual imediato.
-
 **📁 [sistema-despesas-client/README.md](sistema-despesas-client/README.md)** - Instruções para executar o frontend em modo desenvolvimento
 
 ![image](https://github.com/user-attachments/assets/48462eb1-4081-426d-91cd-3f5a79f17d83)
@@ -34,10 +30,6 @@ O frontend se comunica com a API backend para realizar todas as operações CRUD
 - **Bootstrap 5**
 
 ## 🐍 Backend API
-
-API REST desenvolvida em Python com Flask para gerenciamento de despesas mensais. Esta aplicação permite cadastrar, visualizar, atualizar e excluir despesas com diferentes tipos de pagamento (CRÉDITO FIXO, CRÉDITO PARCELADO, PIX, BOLETO).
-
-A API oferece documentação completa via Swagger/OpenAPI, permitindo testes interativos e compreensão clara de todos os endpoints disponíveis.
 
 **📁 [sistema-despesas-api/README.md](sistema-despesas-api/README.md)** - Instruções para executar a API em modo desenvolvimento
 
