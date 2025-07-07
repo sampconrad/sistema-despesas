@@ -97,7 +97,6 @@ sistema-despesas/
 │
 ├── 📋 .gitignore                # Gitignore centralizado
 ├── 📖 LICENSE                   # Licensa MIT
-├── 📖 DOCUMENTACAO.html         # Sumário do projeto como um todo
 ├── 📖 README.md                 # Este arquivo
 └── 📦 dist/                     # Executável gerado
     └──  SistemaDespesas.exe      # Executável standalone
