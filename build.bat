@@ -4,20 +4,16 @@ echo    Sistema de Despesas - Build Script
 echo ========================================
 echo.
 
-echo [1/4] Instalando dependencias...
+echo [1/3] Instalando dependencias...
 pip install -r build_requirements.txt
 
 echo.
-echo [2/4] Criando executavel...
+echo [2/3] Criando executavel unico...
 copy /Y build.spec.template build.spec
 pyinstaller build.spec --clean --distpath dist
 
 echo.
-echo [3/4] Copiando arquivos do frontend...
-python copy_client_files.py
-
-echo.
-echo [4/4] Limpando arquivos temporarios...
+echo [3/3] Limpando arquivos temporarios...
 rmdir /s /q build
 del *.spec
 

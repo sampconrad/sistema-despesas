@@ -6,7 +6,14 @@ import time
 from flask import Flask, send_from_directory
 from flask_cors import CORS
 
-api_path = os.path.join(os.path.dirname(__file__), 'sistema-despesas-api')
+if getattr(sys, 'frozen', False):
+    base_dir = os.path.dirname(sys.executable)
+    if hasattr(sys, '_MEIPASS'):
+        base_dir = sys._MEIPASS
+else:
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+api_path = os.path.join(base_dir, 'sistema-despesas-api')
 sys.path.insert(0, api_path)
 
 try:
@@ -16,11 +23,6 @@ except ImportError as e:
     print(f"API path: {api_path}")
     print(f"Files in API path: {os.listdir(api_path) if os.path.exists(api_path) else 'Path not found'}")
     sys.exit(1)
-
-if getattr(sys, 'frozen', False):
-    base_dir = os.path.dirname(sys.executable)
-else:
-    base_dir = os.path.dirname(os.path.abspath(__file__))
 
 client_dir = base_dir
 

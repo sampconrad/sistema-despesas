@@ -235,6 +235,3 @@ bower_components
 test_*
 *_test.py
 tests/
-
-# Arquivos de documentação gerados
-DOCUMENTACAO.html 

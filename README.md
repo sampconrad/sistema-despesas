@@ -1,6 +1,6 @@
 # 💰 Sistema de Despesas
 
-Aplicação completa para gerenciamento de despesas com API Flask e interface web moderna.
+Sistema completo para controle de despesas mensais com interface web e API REST.
 
 O sistema foi desenvolvido com o objetivo de facilitar o controle financeiro pessoal. Ele permite cadastrar, editar e excluir despesas, além de exibir uma lista detalhada das despesas cadastradas.
 
@@ -53,6 +53,12 @@ O sistema foi desenvolvido com o objetivo de facilitar o controle financeiro pes
 - **Flask-CORS**
 - **Pydantic**
 
+## 👨‍💻 Desenvolvimento
+Para desenvolvimento e modificações do código, consulte os READMEs específicos:
+
+- **📁 [sistema-despesas-api/README.md](sistema-despesas-api/README.md)** - Instruções para executar a API em modo desenvolvimento
+- **📁 [sistema-despesas-client/README.md](sistema-despesas-client/README.md)** - Instruções para executar o frontend em modo desenvolvimento
+
 # 🚀 Build Automatizado
 
 Este guia explica como compilar o Sistema de Despesas em um executável standalone usando o sistema de build automatizado.
@@ -85,18 +91,14 @@ sistema-despesas/
 │   ├── main.py                  # Ponto de entrada do executável
 │   ├── build.spec.template      # Template PyInstaller
 │   ├── build.bat/ps1            # Scripts de build
-│   ├── build_requirements.txt   # Dependências do build
-│   ├── copy_client_files.py     # Script de cópia
-│   └── README_BUILD.md          # Documentação do build
+│   └── build_requirements.txt   # Dependências do build
 │
 ├── 📋 .gitignore                # Gitignore centralizado
+├── 📖 LICENSE                   # Licensa MIT
+├── 📖 DOCUMENTACAO.html         # Sumário do projeto como um todo
 ├── 📖 README.md                 # Este arquivo
 └── 📦 dist/                     # Executável gerado
-    ├── SistemaDespesas.exe      # Executável standalone
-    ├── index.html               # Frontend incluído
-    ├── styles.css
-    ├── scripts.js
-    └── img/
+    └──  SistemaDespesas.exe      # Executável standalone
 ```
 
 ## 📋 Pré-requisitos
@@ -106,8 +108,6 @@ sistema-despesas/
 - **Windows 10/11** (para este build específico)
 
 ## 🔨 Compilação
-
-### Opção 1: Build Automático (Recomendado)
 
 1. **Abra o PowerShell ou Prompt de Comando** na pasta raiz `sistema-despesas/`
 2. **Execute o script de build:**
@@ -119,26 +119,6 @@ sistema-despesas/
    .\build.bat
    ```
 
-### Opção 2: Build Manual
-
-1. **Instale as dependências:**
-   ```bash
-   pip install -r build_requirements.txt
-   ```
-
-2. **Copie o template e execute o PyInstaller:**
-   ```bash
-   copy build.spec.template build.spec
-   pyinstaller build.spec --clean
-   python copy_client_files.py
-   ```
-
-## 👨‍💻 Desenvolvimento
-Para desenvolvimento e modificações do código, consulte os READMEs específicos:
-
-- **📁 [sistema-despesas-api/README.md](sistema-despesas-api/README.md)** - Instruções para executar a API em modo desenvolvimento
-- **📁 [sistema-despesas-client/README.md](sistema-despesas-client/README.md)** - Instruções para executar o frontend em modo desenvolvimento
-
 ## 🎯 Como Usar
 
 ### Executável Standalone (Produção)
@@ -147,13 +127,6 @@ Para desenvolvimento e modificações do código, consulte os READMEs específic
 3. **Aguarde alguns segundos** (inicialização do servidor)
 4. **O navegador abrirá automaticamente** em http://localhost:5000
 
-## 🌍 Acesso à Aplicação
-
-- **URL Local:** http://localhost:5000
-- **Abrir automaticamente:** Sim (configurado no executável)
-- **Porta:** 5000 (configurável no código)
-- **Banco:** SQLite local (automático)
-
 ## ⚙️ Processo de Build
 
 O sistema de build automatizado executa as seguintes etapas:
@@ -161,7 +134,6 @@ O sistema de build automatizado executa as seguintes etapas:
 1. **Instala dependências** (`pip install -r build_requirements.txt`)
 2. **Copia o template** (`build.spec.template` → `build.spec`)
 3. **Cria o executável** (`pyinstaller build.spec --clean`)
-4. **Copia arquivos do frontend** (`python copy_client_files.py`)
 5. **Limpa arquivos temporários**
 
 ## 📦 Estrutura do Executável
@@ -170,12 +142,7 @@ Após o build, você terá:
 
 ```
 dist/
-├── SistemaDespesas.exe    # Executável principal (17MB)
-├── index.html             # Interface do usuário
-├── styles.css             # Estilos CSS
-├── scripts.js             # JavaScript do frontend
-├── img/
-│   └── money.png          # Ícone da aplicação
+├── SistemaDespesas.exe    # Executável principal
 ├── log/                   # Pasta para logs
 └── database/              # Pasta para banco SQLite
 ```
@@ -205,8 +172,8 @@ O executável é **completamente standalone** e inclui:
 
 **Para distribuir:**
 1. Execute o build
-2. Compacte a pasta `dist/`
-3. Envie para qualquer pessoa
+2. Acessa a pasta `dist/`
+3. Envie o arquivo `SistemaDespesas.exe` para qualquer pessoa
 4. Ela só precisa executar o `.exe`
 
 ## 🔄 Atualizações
@@ -221,10 +188,6 @@ Para atualizar o sistema:
 ### Erro: "Porta já em uso"
 - Feche outras instâncias do aplicativo
 - Ou altere a porta no código
-
-### Erro: "Módulo não encontrado"
-- Reinstale as dependências: `pip install -r build_requirements.txt`
-- Execute o build novamente
 
 ### Executável não abre
 - Verifique se o antivírus não está bloqueando
