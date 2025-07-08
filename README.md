@@ -10,7 +10,7 @@ Desenvolvido com o objetivo de facilitar o controle financeiro pessoal, ele perm
 
 **📁 [sistema-despesas-client/README.md](sistema-despesas-client/README.md)** - Instruções para executar o frontend em modo desenvolvimento
 
-![image](https://github.com/user-attachments/assets/48462eb1-4081-426d-91cd-3f5a79f17d83)
+![image](https://github.com/user-attachments/assets/ed9d9d20-ef52-40a4-a35a-450c099c0170)
 
 ### Funcionalidades
 
