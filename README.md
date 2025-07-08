@@ -2,7 +2,7 @@
 
 Sistema completo para controle de despesas mensais com interface web e API REST.
 
-O sistema foi desenvolvido com o objetivo de facilitar o controle financeiro pessoal. Ele permite cadastrar, editar e excluir despesas, além de exibir uma lista detalhada das despesas cadastradas.
+Desenvolvido com o objetivo de facilitar o controle financeiro pessoal, ele permite cadastrar, editar e excluir despesas, além de exibir uma lista detalhada das informações cadastradas, incluindo aviso de vencimento e detalhes de parcelamento.
 
 - Possui build automatizado - **passos descritos abaixo na seção 🚀 Build Automatizado** - que compilará a aplicação em um único arquivo .exe acessível em  `/dist/SistemaDespesas.exe` para facilitar a utilização do sistema.
 
