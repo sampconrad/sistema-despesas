@@ -1,6 +1,6 @@
 # 💰 Sistema de Despesas
 
-Sistema completo para controle de despesas mensais com interface web e API REST.
+Sistema de gestão financeira pessoal, com interface web e API REST servidos à partir de um único arquivo executável.
 
 Desenvolvido com o objetivo de facilitar o controle financeiro pessoal, ele permite cadastrar, editar e excluir despesas, além de exibir uma lista detalhada das informações cadastradas, incluindo aviso de vencimento e detalhes de parcelamento.
 
