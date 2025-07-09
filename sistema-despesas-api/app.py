@@ -186,6 +186,10 @@ def update_despesa(form: DespesaAtualizaSchema):
     - parcelas: Nova quantidade de parcelas (apenas para CRÉDITO PARCELADO)
     - paga: Novo status de pagamento
     
+    **Regras de Negócio:**
+    - Se o tipo for alterado para algo diferente de CRÉDITO PARCELADO, parcelas será zerado
+    - Para despesas do tipo CRÉDITO PARCELADO: quando marcada como paga, o número de parcelas é reduzido em 1
+    
     **Retorna:** Despesa atualizada com todos os dados
     """
     try:
@@ -212,6 +216,11 @@ def update_despesa(form: DespesaAtualizaSchema):
         if form.parcelas is not None and (form.tipo == 'CRÉDITO PARCELADO' or despesa.tipo.value == 'CRÉDITO PARCELADO'):
             despesa.parcelas = form.parcelas
         if form.paga is not None:
+            # Reduzindo número de parcelas quando despesa do tipo CRÉDITO PARCELADO é marcada como paga
+            if form.paga and not despesa.paga and despesa.tipo.value == 'CRÉDITO PARCELADO' and despesa.parcelas is not None and despesa.parcelas > 0:
+                despesa.parcelas = despesa.parcelas - 1
+                logger.debug(f"Parcela paga para despesa #{despesa_id}. Parcelas restantes: {despesa.parcelas}")
+            
             despesa.paga = form.paga
         
         session.commit()
